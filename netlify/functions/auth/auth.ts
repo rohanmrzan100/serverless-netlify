@@ -18,6 +18,9 @@ export const handler: Handler = async (event, Context) => {
         body: "Request body is missing.",
       };
     }
+    // const response = await fetch("https://catfact.ninja/fact");
+    // const data = await response.json();
+    // console.log(data);
 
     const body: EventBody = JSON.parse(event.body);
     if (!body.id || !body.auth) {
